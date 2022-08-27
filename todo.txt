@@ -1,0 +1,20 @@
++1 for month
+shows 7 instead of 8
+
+#name link
+
+add column for bar color css
+big table make red color
+#assign button
+#approve button
+confetti
+
+image url for asigning
+
+#disable button based on genre
+
+timeine make good timeline.put curr date instead of 15days ago
+
+#######show##############33
+extend button
+

@@ -7,26 +7,34 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="module" src="app.js"></script>
     <title></title>
   </head>
   <body>
     <section id="title">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg">
-          <h1>Book boi</h1>
+          <img src="images/humanity.png" alt="" class="humanity_pic">	
+          <h1 class="h1-title">Book boi</h1>
+
           <button class="navbar-toggler navbar-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav" id="ul-nav">
               <li class="nav-item">
-                <a class="nav-link topics" href="#intoduction-part">Introduction <span class="sr-only"></span></a>
+                <a class="nav-link topics" href="#">Home <span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link topics" href="#property">Properties</a>
+                <a class="nav-link topics" href="#timeline">Tracker</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link topics" href="#application-section">Applications</a>
+                <a class="nav-link topics" href="#ddBtn">Submissions</a>
               </li>
             </ul>
           </div>
@@ -35,24 +43,26 @@
           <div class="col-lg-6">
             <h1 class="h1-title">Right place to exp</h1>
           </div>
-          <div class="col-lg-6">
-            <img src="images\number-e.png" alt="number-e" class="number-e">
-          </div>
         </div>
       </div>
     </section>
     <section id="Volunteer">
       <div class="Details" >
-        <div class="photo_volunteer">
-          <img src="images/picture_volunteer.jpg" alt="" class="photo">
+        <div class="photo_volunteer"style="float:left">
+          <img src="images/picture_volunteer.png" alt="" class="photo">
         </div>
         <div class="name"style="float">
-          <h2>Name: ABC</h2>
-          <h5>Age: XYZ</h5>
-          <h5>No of Students: AAA</h5>
+          <h2 class="Volunteer_name" id="volName">Name</h2>
+          <h5 class="Volunteer_name" id="volAge">Age: </h5>
+          <h5 id="numKids">No of Children: </h5>
         </div>
       </div>
     </section>
+    <div class=""style="clear:both">
+    </div>
+    <section>
+      <div id="timeline" style="width:95%; padding-left:10px;height: 400px;"></div>
+  </section>
     <section id="Studentaccept">
       <div class="row">
         <div class="col-lg-4 col-md-6">
@@ -62,19 +72,20 @@
             </div>
             <div class="card-body">
               <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Student 1</a></li>
-                  <li><a class="dropdown-item" href="#">Student 2</a></li>
-                  <li><a class="dropdown-item" href="#">Student 3</a></li>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="ddBtn">
+                  Select Kid
+                  </button>
+                <ul class="dropdown-menu" id="ddKids">
                 </ul>
+                <a class="p-pricing" id="aMoreInfo" href="#">More Info</a>
               </div>
-              <p class="p-pricing">Current book:</p>
-              <p class="p-pricing">Start Time:</p>
-              <button class="btn btn-success btn-lg accept" type="button">Accept</button>
-              <button class="btn btn-warning btn-lg extend" type="button">Extend</button>
+              <p class="p-pricing" id="pCurrBook">Current book:</p>
+              <p class="p-pricing" id="pStTime">Start Time:</p>
+              <div>
+
+                <button class="btn btn-warning  extend" type="button" id="btnExtend">Extend</button>
+                <button class="btn btn-success  accept" type="button" id="btnAccept">Accept</button>
+              </div>
             </div>
           </div>
         </div>
@@ -83,28 +94,15 @@
             <div class="card-header">
               <h3 class="h3-pricing">Hitlist</h3>
             </div>
-            <div class="card-body">
-              <h2 class="h2-pricing">$49 / mo</h2>
-              <p class="p-pricing">Unlimited Matches</p>
-              <p class="p-pricing">Unlimited Messages</p>
-              <p class="p-pricing">Unlimited App Usage</p>
-              <button class="btn btn-primary btn-lg sign-up" type="button">Sign Up</button>
-            </div>
-      <div class="main">
-        <div class="submain">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" id="student1" onclick="runme(this)">Student 1</a></li>
-              <li><a class="dropdown-item" href="#" id="student2" onclick="runme(this)">Student 2</a></li>
-              <li><a class="dropdown-item" href="#" id="student3" onclick="runme(this)">Student 3</a></li>
-            </ul>
+            <div class="card-body" id="divHitlist">
           </div>
         </div>
+      </div>
+      
+        
     </section>
-    
+
+    <script type="text/javascript"src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="module" src="app.js"></script>
     <script type="text/JavaScript" src="main.js"></script>
   </body>

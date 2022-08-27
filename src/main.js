@@ -1,3 +1,3 @@
-function runme(ok){
-console.log(ok.id)
-}
+// function runme(ok){
+// console.log(ok.id)
+// }
