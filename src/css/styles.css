@@ -136,3 +136,9 @@
   margin: 20px;
   width: fill_parent;
 }
+.details-table{
+  padding: 20px;
+}
+.align{
+  text-align: center;
+}

@@ -90,12 +90,12 @@
         else{
           //console.log(name,"not read", book)
           if (bookList[book]["genre"] == kid["prevGenre"]){
-            htmlstring += '<tr bgcolor="#f7f7f7"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td>'
-            htmlstring += '-' + '</td><td>' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary" disabled>Assign</button>' + '</td></tr>'
+            htmlstring += '<tr bgcolor="#f7f7f7"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td class=align>'
+            htmlstring += '-' + '</td><td class=align>' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary" disabled>Assign</button>' + '</td></tr>'
           }
           else{
-            htmlstring += '<tr bgcolor="#f7f7f7"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td>'
-            htmlstring += '-' + '</td><td>' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary btn-assign" id="'+ book +'">Assign</button>' + '</td></tr>'
+            htmlstring += '<tr bgcolor="#f7f7f7"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td class=align>'
+            htmlstring += '-' + '</td><td class=align>' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary btn-assign" id="'+ book +'">Assign</button>' + '</td></tr>'
           }
 
         } 
@@ -106,8 +106,16 @@
 
     
     }  
+
+    console.log(srNo)
     document.getElementById("table").innerHTML = htmlstring    
+
+    document.getElementById("numbooksfin").innerHTML = 'No of Books Finished: ' + kid["numBooksRead"]
+    document.getElementById("numbooksleft").innerHTML = 'No of Books Left: ' + (srNo - kid["numBooksRead"])
     
+    document.getElementById("kidlvl").innerHTML = 'Level: ' + (kid["level"])
+
+
     var btns = document.getElementsByClassName("btn-assign")
 
     for (let i=0; i < btns.length; i++){
