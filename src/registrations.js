@@ -57,6 +57,9 @@
           document.getElementById("age").value = ""
           document.getElementById("gender").value = ""
           document.getElementById("level").value = ""
+          var ok =""
+          document.getElementById("alert").innerHTML='Application Successfully Submitted<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
+          document.getElementById("alert").classList.add("alert", "alert-warning", "alert-dismissible", "fade", "show")
     }else{
         alert("Enter all the details")
     }
