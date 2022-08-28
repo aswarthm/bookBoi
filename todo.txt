@@ -1,5 +1,5 @@
-+1 for month
-shows 7 instead of 8
+#+1 for month
+#shows 7 instead of 8
 
 #name link
 
@@ -14,6 +14,10 @@ image url for asigning
 #disable button based on genre
 
 timeine make good timeline.put curr date instead of 15days ago
+
+#numbooks read
+#registration page
+#coupon
 
 #######show##############33
 extend button

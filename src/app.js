@@ -97,7 +97,7 @@ function allowKidSelection(){
                     numBooksRead++;
                     console.log("num", numBooksRead)
                     writeToPath("volunteer/sindhu/kids/"+kidName+"/numBooksRead/", numBooksRead)
-                    if(numBooksRead > 5){
+                    if(numBooksRead > 4){
                       var ok =""
                       document.getElementById("alert").innerHTML='<strong>Congratulations!</strong> New coupon unlocked<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
                       document.getElementById("alert").classList.add("alert", "alert-warning", "alert-dismissible", "fade", "show")
