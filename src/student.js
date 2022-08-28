@@ -83,7 +83,7 @@
             //console.log(name, "read", book)
             htmlstring += '<tr bgcolor="#80ff80"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td>'
             htmlstring += kid["books"][book]["start"] + '</td><td>'
-            htmlstring += kid["books"][book]["end"] + '</td><td>' + 'Read' + '</td></tr>'
+            htmlstring += kid["books"][book]["end"] + '</td><td>' + 'Completed' + '</td></tr>'
             
           }
         }
@@ -113,7 +113,7 @@
     document.getElementById("numbooksfin").innerHTML = 'No of Books Finished: ' + kid["numBooksRead"]
     document.getElementById("numbooksleft").innerHTML = 'No of Books Left: ' + (srNo - kid["numBooksRead"])
     
-    document.getElementById("kidlvl").innerHTML = 'Level: ' + (kid["level"])
+    document.getElementById("kidlvl").innerHTML = 'Reading Level: ' + (kid["level"])
 
 
     var btns = document.getElementsByClassName("btn-assign")

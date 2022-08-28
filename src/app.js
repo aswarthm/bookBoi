@@ -1,5 +1,4 @@
   var data;
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
   import { getDatabase, ref, child, get, set } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
@@ -99,6 +98,9 @@ function allowKidSelection(){
                     console.log("num", numBooksRead)
                     writeToPath("volunteer/sindhu/kids/"+kidName+"/numBooksRead/", numBooksRead)
                     if(numBooksRead > 4){
+                      var ok =""
+                      document.getElementById("alert").innerHTML='<strong>Congratulations!</strong> New coupon unlocked<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
+                      document.getElementById("alert").classList.add("alert", "alert-warning", "alert-dismissible", "fade", "show")
                       var level = parseInt(a["level"]) + 1
                       writeToPath("volunteer/sindhu/kids/"+kidName+"/level/", level)
                       writeToPath("volunteer/sindhu/kids/"+kidName+"/numBooksRead/", 0)

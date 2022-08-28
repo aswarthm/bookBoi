@@ -1,7 +1,8 @@
 *{
-  
   scroll-padding-top: 125px;
+  
 }
+
 #title{
   background-color: #5463FF;
   padding-bottom: 30px;
@@ -51,7 +52,7 @@
 .h1-title{
   padding-left: 30px;
   color: white;
-  font-family: "Acme";
+  font-family: "Montserrat";
   font-size: 4.5rem;
   text-align: center;
 }
@@ -95,7 +96,7 @@
 .h2-pricing{
   text-align: center;
 }
-.Volunteer_name{
+.Volunteer_name .info{
   font-family: "Abel";
   font-size: 2.5rem;
 }
@@ -106,6 +107,7 @@
   width: 250px;
   height: 250px;
   border: 5px solid #555;
+  border-radius: 15px;
 }
 .photo_student{
   width: 150px;
@@ -141,4 +143,25 @@
 }
 .align{
   text-align: center;
+}
+
+#imgHum{
+  border-radius: 8px;
+  box-shadow: #141E27;
+}
+
+#aMoreInfo{
+  padding-left: 180px;
+}
+
+#Studentaccept{
+  padding: 10px;
+}
+
+#aMoreInfo{
+  color: #0096ff ;
+}
+
+#aMoreInfo:hover{
+  color: #000000;
 }

@@ -15,12 +15,13 @@
     <script type="module" src="app.js"></script>
     <title></title>
   </head>
-  <body>
+  <body class="container">
+  
     <section id="title">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg">
-          <img src="images/humanity.png" alt="" class="humanity_pic">	
-          <h1 class="h1-title">Book boi</h1>
+          <img src="images/humanity.png" alt="" class="humanity_pic" id="imgHum">	
+          <h1 class="h1-title">Book Companion</h1>
 
           <button class="navbar-toggler navbar-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,12 +37,15 @@
               <li class="nav-item">
                 <a class="nav-link topics" href="#ddBtn">Submissions</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link topics" href="/registrations.html">Applications</a>
+              </li>
             </ul>
           </div>
         </nav>
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="h1-title">Right place to exp</h1>
+            <h1 class="h3-title" style="color:#fcfcfc;">Meet your next favourite book</h1>
           </div>
         </div>
       </div>
@@ -49,7 +53,7 @@
     <section id="Volunteer">
       <div class="Details" >
         <div class="photo_volunteer"style="float:left">
-          <img src="images/picture_volunteer.png" alt="" class="photo">
+          <img src="images/woman.jpg" alt="" class="photo shadow-lg mb-5 bg-white">
         </div>
         <div class="name"style="float">
           <h2 class="Volunteer_name" id="volName">Name</h2>
@@ -63,21 +67,22 @@
     <section>
       <div id="timeline" style="width:95%; padding-left:10px;height: 400px;"></div>
   </section>
+  <div id="alert" role="alert" class=""></div>
     <section id="Studentaccept">
       <div class="row">
         <div class="col-lg-4 col-md-6">
-          <div class="card">
+          <div class="card shadow-lg" style="border-radius: 15px;">
             <div class="card-header">
-              <h3 class="h3-pricing">Accept/Decline</h3>
+              <h3 class="h3-pricing" style="color:#ffffff ;">Submissions</h3>
             </div>
             <div class="card-body">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="ddBtn">
+              <div class="dropdown" id="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="ddBtn"  style="background-color:#1fa3ff ;">
                   Select Kid
                   </button>
                 <ul class="dropdown-menu" id="ddKids">
                 </ul>
-                <a class="p-pricing" id="aMoreInfo" href="#">More Info</a>
+                <a class="p-pricing" id="aMoreInfo" href="#" >More Info</a>
               </div>
               <p class="p-pricing" id="pCurrBook">Current book:</p>
               <p class="p-pricing" id="pStTime">Start Time:</p>
@@ -90,9 +95,9 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="card">
+          <div class="card shadow-lg" style="border-radius: 15px;">
             <div class="card-header">
-              <h3 class="h3-pricing">Hitlist</h3>
+              <h3 class="h3-pricing" style="color:#ffffff ;">Hitlist</h3>
             </div>
             <div class="card-body" id="divHitlist">
           </div>
@@ -104,6 +109,7 @@
 
     <script type="text/javascript"src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="module" src="app.js"></script>
+    <script src="confetti.js"></script>
     <script type="text/JavaScript" src="main.js"></script>
   </body>
 </html>
