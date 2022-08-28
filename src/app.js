@@ -156,7 +156,6 @@ function drawChart(rows){
     dataTable.addColumn({ type: "string", id: "bookName" });
     dataTable.addColumn({ type: "date", id: "Start" });
     dataTable.addColumn({ type: "date", id: "End" });
-    //dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });
   
     for (let i = 0; i < rows.length; i++) {
       dataTable.addRow(rows[i]);
@@ -211,10 +210,6 @@ function fillRows(){
                 }
                 else{
                     end = new Date()
-                }
-
-                if((new Date() - start) > 14*24*60*60*1000){
-                    var color = "#ff0000"
                 }
 
                 rows[rows.length] = [
