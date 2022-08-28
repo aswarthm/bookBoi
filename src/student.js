@@ -73,7 +73,7 @@
           
           if (kid["books"][book]["end"] == "-1"){
             htmlstring += '<tr bgcolor="#bdffbd"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td>'
-            htmlstring += kid["books"][book]["start"] + '</td><td>'
+            htmlstring += kid["books"][book]["start"] + '</td><td  class="align">'
             htmlstring += '-' + '</td><td>' + 'In progress' + '</td></tr>'
 
             //console.log(name, "reading", book)
@@ -91,11 +91,11 @@
           //console.log(name,"not read", book)
           if (bookList[book]["genre"] == kid["prevGenre"]){
             htmlstring += '<tr bgcolor="#f7f7f7"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td class=align>'
-            htmlstring += '-' + '</td><td class=align>' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary" disabled>Assign</button>' + '</td></tr>'
+            htmlstring += '-' + '</td><td class="align">' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary" disabled>Assign</button>' + '</td></tr>'
           }
           else{
             htmlstring += '<tr bgcolor="#f7f7f7"> <th scope="row">'+ srNo +'. &emsp;' + book + '</th> <td class=align>'
-            htmlstring += '-' + '</td><td class=align>' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary btn-assign" id="'+ book +'">Assign</button>' + '</td></tr>'
+            htmlstring += '-' + '</td><td class="align">' + '-' + '</td><td>' + '<button type="button" class="btn btn-primary btn-assign" id="'+ book +'">Assign</button>' + '</td></tr>'
           }
 
         } 
@@ -125,7 +125,7 @@
 
 
         set(ref(db, 'volunteer/sindhu/kids/' + name + '/books/'+ book), {
-          start: String((new Date().getDate() - 16) + "-" + new Date().getMonth()  + "-" + new Date().getFullYear()),
+          start: String((new Date().getDate()) + "-" + (new Date().getMonth()+1)  + "-" + new Date().getFullYear()),
           end : "-1"
         });
 

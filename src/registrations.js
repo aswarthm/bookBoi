@@ -53,6 +53,10 @@
             numBooksRead : 0,
             prevGenre : "",
           });
+          document.getElementById("name").value = ""
+          document.getElementById("age").value = ""
+          document.getElementById("gender").value = ""
+          document.getElementById("level").value = ""
     }else{
         alert("Enter all the details")
     }

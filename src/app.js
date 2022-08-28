@@ -97,7 +97,7 @@ function allowKidSelection(){
                     numBooksRead++;
                     console.log("num", numBooksRead)
                     writeToPath("volunteer/sindhu/kids/"+kidName+"/numBooksRead/", numBooksRead)
-                    if(numBooksRead > 4){
+                    if(numBooksRead > 5){
                       var ok =""
                       document.getElementById("alert").innerHTML='<strong>Congratulations!</strong> New coupon unlocked<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
                       document.getElementById("alert").classList.add("alert", "alert-warning", "alert-dismissible", "fade", "show")
@@ -107,7 +107,7 @@ function allowKidSelection(){
                     }
 
                     var today = new Date()
-                    var endTime = today.getDate() +"-"+ today.getMonth() +"-"+  today.getFullYear()
+                    var endTime = today.getDate() +"-"+ (today.getMonth()+1) +"-"+  today.getFullYear()
                     console.log(endTime)
                     var path = "volunteer/sindhu/kids/"+kidName+"/books/"+book+"/end/"
                     console.log(path)
@@ -117,7 +117,7 @@ function allowKidSelection(){
                 });
                 document.getElementById("btnExtend").addEventListener("click", function() {
                     var today = new Date()
-                    var stTime = today.getDate() +"-"+ (today.getMonth()-1) +"-"+  today.getFullYear()
+                    var stTime = today.getDate() +"-"+ (today.getMonth()+1) +"-"+  today.getFullYear()
                     //console.log(stTime)
                     var path = "volunteer/sindhu/kids/"+kidName+"/books/"+book+"/start/"
                     //console.log(path)
@@ -156,6 +156,7 @@ function drawChart(rows){
     dataTable.addColumn({ type: "string", id: "bookName" });
     dataTable.addColumn({ type: "date", id: "Start" });
     dataTable.addColumn({ type: "date", id: "End" });
+    //dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });
   
     for (let i = 0; i < rows.length; i++) {
       dataTable.addRow(rows[i]);
@@ -201,15 +202,19 @@ function fillRows(){
                 //console.log(a[kid]["books"][book])
                 var start = String(a[kid]["books"][book]["start"])
                 start = start.split("-")
-                start = new Date(start[2], start[1], start[0], 0, 0, 0, 0)
+                start = new Date(start[2], start[1]-1, start[0], 0, 0, 0, 0)
                 
                 var end = String(a[kid]["books"][book]["end"])
                 if (end != "-1"){
                     end = end.split("-")
-                    end = new Date(end[2], end[1], end[0], 0, 0, 0, 0)
+                    end = new Date(end[2], end[1]-1, end[0], 0, 0, 0, 0)
                 }
                 else{
                     end = new Date()
+                }
+
+                if((new Date() - start) > 14*24*60*60*1000){
+                    var color = "#ff0000"
                 }
 
                 rows[rows.length] = [
@@ -242,7 +247,7 @@ function fillHitlist(){
             for(var book in a[kid]["books"]){
                 if(a[kid]["books"][book]["end"] == "-1"){
                     var start = String(a[kid]["books"][book]["start"]).split("-")
-                    start = new Date(start[2], start[1], start[0], 0, 0, 0, 0)
+                    start = new Date(start[2], start[1]-1, start[0], 0, 0, 0, 0)
                     if(new Date() - start > (14*24*60*60*1000)){
                         list += '<p class="p-pricing">' + kid + '</p>'
                     }
