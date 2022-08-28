@@ -1,0 +1,20 @@
+{
+  "name": "bookcompanion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx http-server ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aswarthm/bookBoi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aswarthm/bookBoi/issues"
+  },
+  "homepage": "https://github.com/aswarthm/bookBoi#readme"
+}
