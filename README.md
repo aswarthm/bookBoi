@@ -1,3 +1,2 @@
 # bookBoi
-
-https://bookcompanion.herokuapp.com/
+[Link to Website](https://aswarthm.github.io/bookBoi/)  
